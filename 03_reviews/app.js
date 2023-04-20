@@ -44,7 +44,35 @@ const randomBtn = document.querySelector('.random-btn');
 let currentItem = 0;
  
 // load item
-window.addEventListener('devicemotion', () =>{
+window.addEventListener('DOMContentLoaded', () =>{
+  showPerson();
+})
+
+// Show person based on item
+function showPerson() {
   const item = reviews[currentItem];
   img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
+
+// show next person 
+
+nextBtn.addEventListener('click', ()=>{
+  currentItem ++;
+  if(currentItem > reviews.length -1) {
+    currentItem = 0
+  }
+  showPerson(currentItem);
+})
+
+// show prvious person 
+
+prevBtn.addEventListener('click', ()=>{
+  currentItem--;
+  if(currentItem < 0) {
+    currentItem = 3;
+  }
+  showPerson(currentItem);
 })
