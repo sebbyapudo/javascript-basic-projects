@@ -35,6 +35,9 @@ window.addEventListener('scroll', ()=>{
   if(scrollHeight > navHeight) {
     navbar.classList.add('fixed-nav');
   }
+  else {
+    navbar.classList.remove('fixed-nav')
+  }
 });
 
 // ********** smooth scroll ************
