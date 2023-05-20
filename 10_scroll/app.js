@@ -8,8 +8,14 @@ const date = document.querySelector("#date");
 date.innerHTML = new Date().getFullYear()
 
 // ********** close links ************
+const navToggle = document.querySelector('.nav-toggle');
+const linksContainer = document.querySelector('.links-container');
+const links = document.querySelector('.links');
 
 // ********** fixed navbar ************
+navToggle.addEventListener('click', ()=> {
+  linksContainer.classList.toggle('show-links')
+});
 
 // ********** smooth scroll ************
 // select links
