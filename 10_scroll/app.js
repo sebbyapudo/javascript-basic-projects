@@ -72,6 +72,10 @@ scrollLinks.forEach(function(link){
       position = position - navHeight;
     }
 
+    if(navHeight > 82) {
+      position = position +containerHeight;
+    }
+
     window.scrollTo({
       left: 0,
       top: position,
