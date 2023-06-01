@@ -28,7 +28,13 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let futureDate = new Date(2023, 6, 1, 23, 59, 0);
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDay();
+
+// let futureDate = new Date(2023, 6, 1, 23, 59, 0);
+const futureDate = new Date(tempYear, tempMonth, tempDay + 26, 23, 59, 0)
 
 const year = futureDate.getFullYear(); 
 const hours = futureDate.getHours();
@@ -40,7 +46,7 @@ const date = futureDate.getDate();
 let weekday = weekdays[futureDate.getDay()];
 
 
-giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}pm`;
+giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}pmg`;
 
 // future time in ms
 
