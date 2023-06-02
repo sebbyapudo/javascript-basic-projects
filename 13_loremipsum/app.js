@@ -28,4 +28,9 @@ form.addEventListener('submit', (e)=>{
     if(isNaN(value) || value < 0 || value > 9) {
       result.innerHTML = `<p class="result">${text[random]}</p>`
     }
+    else {
+      let tempText= text.slice(0,value);
+      result.innerHTML = tempText;
+      console.log(tempText);
+    }
 });
