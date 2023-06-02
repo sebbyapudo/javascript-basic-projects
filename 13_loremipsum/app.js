@@ -30,7 +30,9 @@ form.addEventListener('submit', (e)=>{
     }
     else {
       let tempText= text.slice(0,value);
+      tempText = tempText.map((item)=>{
+        return `<p class="result">${item}</p>`
+      }).join('');
       result.innerHTML = tempText;
-      console.log(tempText);
     }
 });
