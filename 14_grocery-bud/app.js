@@ -23,13 +23,14 @@ function addItem(e) {
   const id = new Date().getTime().toString()
   if(value && !editFlag) {
     console.log("Adding items to the list");
-  }else if (!value && editFlag === true){
+  }else if (value && editFlag){
     console.log("editing");
   }else{
     alert.textContent = 'empty value';
     alert.classList.add('alert-danger')
   }
 }
+
 // ****** LOCAL STORAGE **********
 
 // ****** SETUP ITEMS **********
